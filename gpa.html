@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GPA-CALCULATOR</title>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./gpa.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="text-center">GPA CALCULATOR</h1>
+
+			<div class="calculationTable">
+				<button
+					type="submit"
+					class="btn btn-success btn-lg"
+					id="addBtn"
+					onclick="addRow()"
+				>
+					Add Subject
+				</button>
+			</div>
+
+			<li>Each Subject Total Marks = 100</li>
+			<li>
+				Don't Let Any Input Empty Otherwise Result Will Not Be accurate
+			</li>
+			<div class="table-responsive-sm mt-3">
+				<table class="table" id="calTable">
+					<thead>
+						<tr>
+							<th scope="col">SUBJECT</th>
+							<!-- <th scope="col">TOTAL MARKS</th> -->
+							<th scope="col">OBTAINED MARKS</th>
+							<th scope="col">SUBJECT CREDITS</th>
+							<th scope="col">GPA</th>
+							<th scope="col">GRADE</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr id="inputRow">
+							<td>SUBJECT</td>
+							<!-- <td id="tm">
+									<input
+										type="text"
+										id="totalMarks"
+										class="form-control"
+									/>
+								</td> -->
+							<td id="om">
+								<input
+									type="text"
+									id="obtainedMarks"
+									class="form-control"
+								/>
+							</td>
+							<td id="cb">
+								<input
+									type="text"
+									class="form-control"
+									id="creditBox"
+								/>
+							</td>
+							<td id="gpaBox"></td>
+							<td id="gradeBox"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div>
+				<label for="PGPA">PREVIOUS SEMESTER GPA : </label>
+				<small>Optional</small>
+				<input type="text" class="form-control PGPA" id="PGPA" />
+			</div>
+
+			<div class="mt-4">
+				<p>TOTAL CGPA : <span id="gpa"></span></p>
+				<p>PERCENTAGE : <span id="percentage"></span></p>
+			</div>
+
+			<button
+				class="btn btn-danger btn-lg"
+				id="deleteBtn"
+				onclick="delRow()"
+			>
+				Delete Subject
+			</button>
+
+			<button
+				type="submit"
+				class="btn btn-primary btn-lg"
+				onclick="calculate()"
+				id="calculateBtn"
+			>
+				Calculate
+			</button>
+
+			<table class="table table-bordered">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">GRADES</th>
+						<th scope="col">GPA</th>
+						<th scope="col">MARKS</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>A+</td>
+						<td>4</td>
+						<td>90-100</td>
+					</tr>
+					<tr>
+						<td>A-</td>
+						<td>3.7</td>
+						<td>85-90</td>
+					</tr>
+					<tr>
+						<td>B+</td>
+						<td>3.3</td>
+						<td>80-84</td>
+					</tr>
+					<tr>
+						<td>B</td>
+						<td>3</td>
+						<td>75-79</td>
+					</tr>
+					<tr>
+						<td>B-</td>
+						<td>2.7</td>
+						<td>70-74</td>
+					</tr>
+					<tr>
+						<td>C+</td>
+						<td>2.3</td>
+						<td>65-69</td>
+					</tr>
+					<tr>
+						<td>C</td>
+						<td>2</td>
+						<td>60-64</td>
+					</tr>
+					<tr>
+						<td>C-</td>
+						<td>1.7</td>
+						<td>55-59</td>
+					</tr>
+					<tr>
+						<td>D</td>
+						<td>1.3</td>
+						<td>50-54</td>
+					</tr>
+					<tr>
+						<td>F</td>
+						<td>0</td>
+						<td>0-49</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"
+		></script>
+		<script src="./gpa.js
+        "></script>
+	</body>
+</html>

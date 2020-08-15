@@ -1,0 +1,77 @@
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.25rem;
+	font-weight: 300;
+}
+.container {
+	margin-top: 1cm;
+	margin-bottom: 1cm;
+	padding: 2cm 1cm;
+	box-shadow: 0 0 1rem 0.5rem gray;
+}
+.calculationTable {
+	margin-top: 2cm;
+}
+h1 {
+	font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+table {
+	border-collapse: collapse;
+}
+table,
+td,
+th {
+	border: 2px solid black;
+}
+thead {
+	background-color: teal;
+}
+small {
+	color: red;
+}
+#addBtn,
+#calculateBtn,
+#deleteBtn {
+	margin-bottom: 20px;
+}
+#tm,
+#om,
+#cb {
+	padding: 0;
+}
+.PGPA {
+	width: 30%;
+	border-color: black;
+	border-width: 2px;
+	border-radius: 0px;
+}
+.PGPA:focus {
+	box-shadow: 0 0 0 0 black;
+	color: black;
+}
+.form-control.PGPA:focus {
+	border-color: black;
+}
+.form-control:not(.PGPA) {
+	border: 0;
+	border-radius: 0px;
+	line-height: 2;
+	font-size: 1.25rem;
+	color: black;
+}
+.form-control:focus:not(.PGPA) {
+	box-shadow: 0 0 0 0 white;
+	/* border: 1px solid rgb(0, 195, 255); */
+	font-size: 1.25rem;
+	color: black;
+}
+
+@media only screen and (max-width: 480px) {
+	body {
+		font-size: 1rem;
+	}
+	.container {
+		padding: 2cm 10px;
+	}
+}
