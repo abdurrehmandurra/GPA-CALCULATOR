@@ -17,80 +17,70 @@
 			<h1 class="text-center">GPA CALCULATOR</h1>
 
 			<div class="calculationTable">
-				<button
-					type="submit"
-					class="btn btn-success btn-lg"
-					id="addBtn"
-					onclick="addRow()"
-				>
+				<button type="submit" class="btn btn-success btn-lg" id="addBtn" onclick="addRow()">
 					Add Subject
 				</button>
 			</div>
 
-			<li>Each Subject Total Marks = 100</li>
-			<li>
-				Don't Let Any Input Empty Otherwise Result Will Not Be accurate
-			</li>
 			<div class="table-responsive-sm mt-3">
 				<table class="table" id="calTable">
 					<thead>
 						<tr>
 							<th scope="col">SUBJECT</th>
-							<!-- <th scope="col">TOTAL MARKS</th> -->
-							<th scope="col">OBTAINED MARKS</th>
-							<th scope="col">SUBJECT CREDITS</th>
+							<th scope="col">CREDIT HOURS</th>
 							<th scope="col">GPA</th>
-							<th scope="col">GRADE</th>
+							<!-- <th scope="col">GRADE</th> -->
 						</tr>
 					</thead>
 
 					<tbody>
 						<tr id="inputRow">
-							<td>SUBJECT</td>
-							<!-- <td id="tm">
-									<input
-										type="text"
-										id="totalMarks"
-										class="form-control"
-									/>
-								</td> -->
-							<td id="om">
-								<input
-									type="text"
-									id="obtainedMarks"
-									class="form-control"
-								/>
-							</td>
+							<td class="p-1">SUBJECT</td>
 							<td id="cb">
-								<input
-									type="text"
-									class="form-control"
-									id="creditBox"
-								/>
+								<select id="credits" class="form-control">
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select>
 							</td>
-							<td id="gpaBox"></td>
-							<td id="gradeBox"></td>
+							<td id="gpaBox">
+								<select id="gpa" class="form-control">
+									<option value="0">0</option>
+									<option value="1.3">1.3</option>
+									<option value="1.7">1.7</option>
+									<option value="2">2</option>
+									<option value="2.3">2.3</option>
+									<option value="2.7">2.7</option>
+									<option value="3">3</option>
+									<option value="3.3">3.3</option>
+									<option value="3.7">3.7</option>
+									<option value="4">4</option>
+								</select>
+							</td>
+							<!-- <td id="gradeBox">
+								<select id="grade" class="form-control">
+									<option value="A+">A+</option>
+									<option value="A-">A-</option>
+									<option value="B+">B+</option>
+									<option value="B">B</option>
+									<option value="B-">B-</option>
+									<option value="C+">C+</option>
+									<option value="C">C</option>
+									<option value="C-">C-</option>
+									<option value="D">D</option>
+									<option value="F">F</option>
+								</select>
+							</td> -->
 						</tr>
 					</tbody>
 				</table>
 			</div>
 
-			<div>
-				<label for="PGPA">PREVIOUS SEMESTER GPA : </label>
-				<small>Optional</small>
-				<input type="text" class="form-control PGPA" id="PGPA" />
-			</div>
-
 			<div class="mt-4">
-				<p>TOTAL CGPA : <span id="gpa"></span></p>
-				<p>PERCENTAGE : <span id="percentage"></span></p>
+				<p id="gpaParagraph">TOTAL GPA : <span id="GPA"></span></p>
 			</div>
 
-			<button
-				class="btn btn-danger btn-lg"
-				id="deleteBtn"
-				onclick="delRow()"
-			>
+			<button class="btn btn-danger btn-lg" id="deleteBtn" onclick="delRow()">
 				Delete Subject
 			</button>
 
@@ -103,7 +93,8 @@
 				Calculate
 			</button>
 
-			<table class="table table-bordered">
+			<!-- GPA AND GRADES TABLE -->
+			<table class="table table-bordered mt-4">
 				<thead class="thead-dark">
 					<tr>
 						<th scope="col">GRADES</th>
